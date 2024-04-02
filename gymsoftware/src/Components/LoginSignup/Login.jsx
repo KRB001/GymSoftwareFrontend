@@ -1,9 +1,9 @@
 import React, { useState} from 'react';
-import './LoginSignup.css';
+import './Login.css';
 import { FaUserCircle } from "react-icons/fa";
 import { RiLock2Fill } from "react-icons/ri";
 
-export const LoginSignup = () => {
+export const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState([]);
@@ -71,4 +71,4 @@ export const LoginSignup = () => {
     )
 }
 
-export default LoginSignup;
+export default Login;
