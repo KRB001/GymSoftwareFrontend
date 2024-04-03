@@ -20,18 +20,16 @@ export const Login = () => {
     const validate = () => {
         const error = {};
 
-        if (!username) {
+        if (!username || !/^[a-zA-Z0-9_]+$/.test(username)) {
             error.username = 'Invalid username';
-        } else if (!/\S+@\S+\.\S+/.test(username)) {
-            error.username = 'Username not matched';
         } else {
             error.username = '';
         }
 
         if (!password) {
-            error.password = 'Invalid password';
+            error.password = 'Invalid password.';
         } else if (password.length < 8) {
-            error.password = 'Password not matched';
+            error.password = 'Password has to be at least 8 characters!';
         } else {
             error.password = '';
         }
